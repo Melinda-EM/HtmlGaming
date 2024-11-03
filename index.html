@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            --form-height: 6rem;
+            --form-content-size: 2rem;
+        }
+
+        body,
+        canvas {
+            background-color: black;
+        }
+
+        canvas {
+            width: 100%;
+            object-fit: contain;
+            image-rendering: crisp-edges;
+            image-rendering: pixelated;
+        }
+        img {
+            display: none;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            gap: var(--form-content-size);
+            height: var(--form-height);
+        }
+
+        form * {
+            font-size: var(--form-content-size);
+        }
+
+        input[type='checkbox'] {
+            width: var(--form-content-size);
+            height: var(--form-content-size);
+        }
+
+        main {
+            display: flex;
+            height: calc(100% - var(--form-height));
+        }
+
+        label {
+            color: white;
+        }
+
+    </style>
+    <script type="module" src="./src/index.js"></script>
+</head>
+<body>
+    
+    <canvas width="462" height="241"></canvas>
+    
+    <!-- <img src="./images/stage0.png" alt="background"> -->
+    <img src="./images/stage_metro.png" alt="stage">
+    <img src="./images/misc.png" alt="misc">
+    <img src="./images/HUD_Dio.png" alt="dioName">
+    <img src="./images/HUD_Jotaro.png" alt="jotaroName">
+    <img src="./images/decals.png" alt="decals">
+    <img src="./images/ombre.png" alt="ombre">
+    <img src="./images/dio.png" alt="dio">
+    <img src="./images/jotaro.png" alt="jotaro">
+
+    <audio id="theme-metro" src="./sounds/theme-metro-main-cps1.mp3" preload="auto" loop></audio>
+    <audio id="sound-fighter-atterissage" src="./sounds/atterissage.wav" preload="auto"></audio>
+    <audio id="sound-fighter-leger-attack" src="./sounds/leger-attack.wav" preload="auto"></audio>
+    <audio id="sound-fighter-leger-coup-hit" src="./sounds/leger-coup-hit.wav" preload="auto"></audio>
+    <audio id="sound-fighter-leger-kick-hit" src="./sounds/leger-kick-hit.wav" preload="auto"></audio>
+    <audio id="sound-fighter-moyen-attack" src="./sounds/moyen-attack.wav" preload="auto"></audio>
+    <audio id="sound-fighter-moyen-coup-hit" src="./sounds/moyen-coup-hit.wav" preload="auto"></audio>
+    <audio id="sound-fighter-moyen-kick-hit" src="./sounds/moyen-kick-hit.wav" preload="auto"></audio>
+    <audio id="sound-fighter-fort-attack" src="./sounds/fort-attack.wav" preload="auto"></audio>
+    <audio id="sound-fighter-fort-coup-hit" src="./sounds/fort-coup-hit.wav" preload="auto"></audio>
+    <audio id="sound-fighter-fort-kick-hit" src="./sounds/fort-kick-hit.wav" preload="auto"></audio>
+
+</body>
+</html>
+
+
